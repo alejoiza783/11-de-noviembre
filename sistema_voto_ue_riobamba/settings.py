@@ -12,7 +12,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['onrender.com',]
+ALLOWED_HOSTS = ['onrender.com', "*"]
 
 
 
@@ -73,8 +73,10 @@ WSGI_APPLICATION = 'sistema_voto_ue_riobamba.wsgi.application'
 
 
 DATABASES = {
-    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
+   'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
 }
+
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {
