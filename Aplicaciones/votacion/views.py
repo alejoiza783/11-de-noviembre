@@ -894,12 +894,12 @@ def registrar_voto(request, proceso_id):
         print(f"Hash del voto: {hash_voto}")
         
         # Generar el carnet de votación
-        from .utils import generar_carnet_votacion
-        carnet = generar_carnet_votacion(voto)
+        #from .utils import generar_carnet_votacion
+        #carnet = generar_carnet_votacion(voto)
         
         # Enviar el correo con el comprobante
-        from .utils import enviar_comprobante_email
-        enviar_comprobante_email(carnet)
+        #from .utils import enviar_comprobante_email
+        #enviar_comprobante_email(carnet)
         
         messages.success(request, '¡Su voto ha sido registrado exitosamente! Se ha enviado un correo con su comprobante de votación.')
         return redirect('administracion:index')
