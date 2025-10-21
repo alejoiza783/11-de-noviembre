@@ -72,10 +72,16 @@ WSGI_APPLICATION = 'sistema_voto_ue_riobamba.wsgi.application'
 
 
 
-DATABASES = {
-   'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
-}
+#DATABASES = {
+ #   'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
+#}
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db_votaciones_riobamba.db'),
+    }
+}
 
 
 AUTH_PASSWORD_VALIDATORS = [
