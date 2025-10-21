@@ -39,6 +39,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -47,6 +48,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'sistema_voto_ue_riobamba.urls'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 TEMPLATES = [
     {
@@ -108,7 +111,7 @@ STATICFILES_DIRS = [
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'sistema_voto_ue_riobamba', 'static'),
-    os.path.join(BASE_DIR, 'Aplicaciones', 'administracion', 'static'),
+    
     os.path.join(BASE_DIR, 'Aplicaciones', 'padron', 'static'),
 ]
 
