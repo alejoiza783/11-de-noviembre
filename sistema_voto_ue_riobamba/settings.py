@@ -1,6 +1,7 @@
 
 from pathlib import Path
 import os
+pip install dj-database-url
 import dj_database_url
 
 
